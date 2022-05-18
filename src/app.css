@@ -1,1 +1,7 @@
-.wrap{margin: 0 auto;padding: 0; width: 600px; height: 100vh; background-color: #fff;}
+.wrap{display: flex; flex-direction: column; justify-content: space-between; margin: 0 auto;padding: 0; width: 600px; height: 100vh; background-color: #fff;}
+
+.contents{overflow-y: scroll; width: 100%; height: 100%; background-color: #ccc;}
+::-webkit-scrollbar {display: none;}
+
+footer{position:static; z-index: 999;padding: 15px 0; width: 100%; border-top: 1px solid #dfdfdf;display:table;table-layout: fixed; width: 100%;}
+footer a{display:table-cell; text-align:center;}

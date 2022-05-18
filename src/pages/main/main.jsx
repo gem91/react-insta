@@ -10,26 +10,25 @@ import BtnSearch from './components/buttons/btn-search';
 import Header from './components/header/header';
 import Profile from './components/profile/profile';
 
-import './app.css';
+import styles from './main.module.css';
 
 const Main = (props) => {
     return(
-        <div className='wrap'>
+        <div className={styles.mainWrap}>
             <Header />
-            <div className='contents'>
-                <Routes>
-                    <Route path="/" element={<PagePeeds /> }></Route>
-                    <Route path="/search" element={<PageSearch />}></Route>
-                    <Route path="/like" element={<PageLike />}></Route>
-                    <Route path="/profile" element={<PageProfile />}></Route>
-                </Routes>
-            </div>
-            
+            <Routes>
+                <Route path="/home" element={<PagePeeds /> }></Route>
+                <Route path="/search" element={<PageSearch />}></Route>
+                <Route path="/like" element={<PageLike />}></Route>
+                <Route path="/profile" element={<PageProfile />}></Route>
+            </Routes>
             <footer>
-                    <Link to="/"><BtnHome /></Link>
+                <ul>
+                    <Link to="/home"><BtnHome /></Link>
                     <Link to="/search"><BtnSearch /></Link>
                     <Link to="/like"><BtnLike /></Link>
                     <Link to="/profile"><Profile /></Link>
+                </ul>
             </footer>
         </div>
     )
