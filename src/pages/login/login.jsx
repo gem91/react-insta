@@ -6,7 +6,7 @@ const Login = (props) => {
     const navigator = useNavigate();
     const goToMain = () => {
         navigator(
-            {pathname: '/main'},
+            {pathname: '/home'},
             // {state: { id: userId }}
         )
     }

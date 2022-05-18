@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 // import { useNavigate } from 'react-router-dom';
 import BtnSearch from '../buttons/btn-search';
 import BtnHome from '../buttons/btn-home';
@@ -14,7 +15,9 @@ const Footer = ( {linkMain} ) => {
         <footer className={styles.footer}>
             <ul>
                 <li>
-                    <BtnHome linkMain={linkMain}  />
+                    <NavLink>
+                        <BtnHome linkMain={linkMain}  />
+                    </NavLink>
                 </li>
                 <li><BtnSearch /></li>
                 <li><BtnLike /></li>

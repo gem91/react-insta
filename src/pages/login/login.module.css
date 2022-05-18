@@ -1,6 +1,8 @@
-.loginWrap{display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 0 7%; height: 100%; }
+.loginWrap{display: flex; flex-direction: column; justify-content: center; align-items: center;margin: 0 auto;padding: 0 100px; width: 100%; background-color: #fff;}
 .logo{ margin: 0 auto;}
 .logo img{display: block; margin: 0 auto; width: 200px;}
 .input{margin-top: 45px; padding: 5px 20px; width: 100%; height: 45px; border-radius: 3px;}
 .btnLogin{margin-top: 10px; padding: 15px 20px; width: 100%; font-size: 1.2rem; color: #666; font-family: 'Roboto Flex', sans-serif; border-radius: 3px; background-color: #dfdfdf;}
+
+
 
