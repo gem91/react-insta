@@ -12,28 +12,29 @@ import PagePeeds from '../page-peeds/page-peeds';
 import PageLike from '../page-like/page-like';
 import PageSearch from '../page-search/page-search';
 import PageProfile from '../page-profile/page-profile';
+import Footer from '../../components/footer/footer';
 
-const Main = (props) => {
+const Main = () => {
+    const btnDatas = [
+        {id: 1, obj: 'BtnHome', path: '/' },
+        {id: 2, obj: 'BtnLike', path: '/search' },
+        {id: 3, obj: 'BtnSearch', path: '/like' },
+        {id: 4, obj: 'BtnProfile', path: '/profile' }
+    ]
+
+   
     return(
         <div className={styles.mainWrap}>
             <Header />
-            <div>
-            <Routes>
-               <Route path="/home" element={<PagePeeds />}></Route>
-               <Route path="/search" element={<PageSearch />}></Route>
-               <Route path="/like" element={<PageLike />}></Route>
-               <Route path="/profile" element={<PageProfile />}></Route>
-            </Routes>
+            <div className={styles.contents}>
+                <Routes>
+                    <Route path="/" element={<PagePeeds />}></Route>
+                    <Route path="/search" element={<PageSearch />}></Route>
+                    <Route path="/like" element={<PageLike />}></Route>
+                    <Route path="/profile" element={<PageProfile />}></Route>
+                </Routes>
             </div>
-          
-            <footer className={styles.footer}>
-                <nav>
-                    <NavLink to="/home"><BtnHome /></NavLink>
-                    <NavLink to="/search"><BtnLike /></NavLink>
-                    <NavLink to="/like"><BtnSearch /></NavLink>
-                    <NavLink to="/profile"><BtnProfile /></NavLink>
-                </nav>
-            </footer>
+          <Footer btnDatas={btnDatas} />
         </div>
     )
 };

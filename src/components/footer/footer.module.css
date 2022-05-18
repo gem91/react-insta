@@ -1,4 +1,4 @@
 .footer{position:static; z-index: 999;padding: 15px 0; width: 100%; border-top: 1px solid #dfdfdf}
 
-ul{display:table;table-layout: fixed; width: 100%;}
-li{display:table-cell; text-align:center;}
+nav{display:table;table-layout: fixed; width: 100%;}
+a{display:table-cell; text-align:center;}
