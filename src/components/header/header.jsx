@@ -10,7 +10,7 @@ const Header = (props) => {
     const navigator = useNavigate();
     const goToMain = () => {
             navigator(
-            {pathname: '/home'},
+            {pathname: '/'},
         )
     }
    

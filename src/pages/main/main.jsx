@@ -12,9 +12,9 @@ import Footer from '../../components/footer/footer';
 
 const Main = () => {
     const btnDatas = [
-        {id: 1, obj: 'BtnHome', path: '/home' },
-        {id: 2, obj: 'BtnLike', path: '/search' },
-        {id: 3, obj: 'BtnSearch', path: '/like' },
+        {id: 1, obj: 'BtnHome', path: '/' },
+        {id: 2, obj: 'BtnLike', path: '/like' },
+        {id: 3, obj: 'BtnSearch', path: '/search' },
         {id: 4, obj: 'BtnProfile', path: '/profile' }
     ]
 

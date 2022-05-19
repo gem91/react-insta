@@ -7,6 +7,7 @@ import { NavLink } from 'react-router-dom';
 import styles from './footer.module.css'
 
 const Footer = ( {btnDatas} ) => {
+
     return(
         <footer className={styles.footer}>
             <nav>
