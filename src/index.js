@@ -1,16 +1,11 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './app';
-import '@fortawesome/fontawesome-free/js/all.js';
-import { BrowserRouter } from 'react-router-dom';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.scss";
+import App from "./app";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <BrowserRouter>
+   <React.StrictMode>
       <App />
-    </BrowserRouter>
-  </React.StrictMode>,
-  document.getElementById('root')
+   </React.StrictMode>,
+   document.getElementById("root")
 );
-
