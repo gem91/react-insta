@@ -1,0 +1,59 @@
+.peedContainer {
+   .profile {
+      display: flex;
+      align-items: center;
+      padding: 10px 15px;
+      img {
+         display: block;
+         margin-right: 10px;
+         border-radius: 50%;
+         overflow: hidden;
+      }
+   }
+   .contents {
+      .postBox {
+         display: block;
+
+         img {
+            width: 100%;
+         }
+      }
+      .socialContent {
+         padding: 0 15px;
+         .userFlow {
+            padding: 10px 0;
+            display: flex;
+            span {
+               display: block;
+               margin-right: 5px;
+            }
+         }
+         .commentBox {
+            height: 40px;
+            overflow: hidden;
+            ul {
+               li {
+                  margin-bottom: 5px;
+                  display: flex;
+                  align-items: center;
+                  list-style-type: none;
+                  span {
+                     margin-right: 10px;
+                     img {
+                        display: block;
+                        border-radius: 50%;
+                        overflow: hidden;
+                     }
+                  }
+                  p {
+                     font-size: 0.8rem;
+                  }
+                  &:last-child {
+                     margin-bottom: 0;
+                  }
+               }
+            }
+         }
+      }
+   }
+}

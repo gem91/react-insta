@@ -1,7 +1,8 @@
 import React from "react";
 import styles from "./main.module.scss";
-import Header from "../../components/header/header";
-import Footer from "../../components/footer/footer";
+import Header from "../../components/header";
+import Footer from "../../components/footer";
+import { Outlet } from "react-router-dom";
 
 const Main = ({ user }) => {
    console.log(user);
@@ -15,7 +16,7 @@ const Main = ({ user }) => {
    return (
       <div className={styles.mainWrap}>
          <Header />
-         <div>test</div>
+         <Outlet></Outlet>
          <Footer btnDatas={btnDatas} />
       </div>
    );

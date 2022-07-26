@@ -1,23 +1,22 @@
 import React from "react";
 import { useRef } from "react";
+import { Link } from "react-router-dom";
+import LoginButton from "../../components/buttons/LoginButton";
+
 import styles from "./login.module.scss";
 
-const Login = ({ setUser }) => {
+const Login = ({ user, setUser }) => {
    const idRef = useRef();
 
-   const handleId = () => {
+   const handleTextValue = () => {
       const idValue = idRef.current.value;
-      console.log(idValue);
       setUser(idValue);
    };
-   const handleInput = (e) => {
+
+   const pressEnter = (e) => {
       if (e.key === "Enter") {
-         handleId();
+         handleTextValue();
       }
-   };
-   const onSubmit = () => {
-      handleId();
-      // counter.current = counter.current + 1;
    };
 
    return (
@@ -30,11 +29,16 @@ const Login = ({ setUser }) => {
             className={styles.idInput}
             type="text"
             placeholder="Enter Your Name"
-            onKeyPress={handleInput}
+            onKeyPress={pressEnter}
+            onChange={handleTextValue}
          />
-         <button className={styles.btnLogin} type="submit" onClick={onSubmit}>
-            Login
-         </button>
+         {user !== null ? (
+            <Link to="/home">
+               <LoginButton />
+            </Link>
+         ) : (
+            <LoginButton />
+         )}
       </div>
    );
 };
